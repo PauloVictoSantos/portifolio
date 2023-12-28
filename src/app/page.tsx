@@ -41,7 +41,7 @@ export default function Home() {
         <Avatar />
       </section>
 
-      <Adout />
+      <Adout /> 
       <Expericence />
       <Skills />
       <Work />
