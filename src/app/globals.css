@@ -147,8 +147,34 @@
   }
 }
 
+@keyframes fadeInDisappear {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fadeInDisappear {
+  animation: fadeInDisappear 5s ease-in-out;
+}
+
+
 body{
   background-color: black;
   color: white;
   overflow-y: scroll;
+}
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

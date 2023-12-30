@@ -3,11 +3,11 @@ import { SocialIcon } from "../components/SocialIcon";
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import Adout from "../components/adout";
-import { Expericence } from "@/components/Expericence";
 import { Work } from "@/components/Work";
 import { Contact } from "@/components/Contact";
 import { Skills } from "@/components/Skills";
 import { Avatar } from "@/components/Avatar";
+import { Expericence } from "@/components/Expericence";
 
 export default function Home() {
   return (
@@ -42,7 +42,7 @@ export default function Home() {
       </section>
 
       <Adout /> 
-      <Expericence />
+      <Expericence /> 
       <Skills />
       <Work />
       <Contact />
