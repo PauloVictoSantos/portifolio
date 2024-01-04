@@ -3,7 +3,6 @@ import {
   HiUser,
   HiSquare2Stack,
   HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
   HiEnvelope,
 } from "react-icons/hi2";
 import { RxDesktop } from "react-icons/rx";
@@ -22,11 +21,11 @@ import {
 
 export const navData = [
   { name: "Home", path: "/", icon: <HiHome /> },
-  { name: "adout", path: "/", icon: <HiUser /> },
-  { name: "Expericence", path: "/", icon: <MdOutlineWork /> },
-  { name: "Skils", path: "/", icon: <HiRectangleGroup /> },
-  { name: "work", path: "/", icon: <HiSquare2Stack /> },
-  { name: "contact", path: "/", icon: <HiEnvelope /> },
+  { name: "About", path: "#About", icon: <HiUser /> },
+  { name: "Experience", path: "#Expericence", icon: <MdOutlineWork /> },
+  { name: "Skills", path: "#Skills", icon: <HiRectangleGroup /> },
+  { name: "Work", path: "#Work", icon: <HiSquare2Stack /> },
+  { name: "Contact", path: "#Contact", icon: <HiEnvelope /> },
 ];
 
 export const skills = [
@@ -54,21 +53,20 @@ export const skills = [
 
 export const qualificacaoData = [
   {
-    title: "experience",
     info: [
       {
         title: "Design",
-        icons: <MdOutlineWeb />,
+        icons: <MdOutlineWeb size={70} />,
         description: "ola oamakmq kmqk z skmwks xdkmdkendkime cemkewf ",
       },
       {
         title: "Front",
-        icons: <PiCodeBlockDuotone />,
+        icons: <PiCodeBlockDuotone size={70} />,
         description: "ola oamakmq kmqk z skmwks xdkmdkendkime cemkewf ",
       },
       {
         title: "Back",
-        icons: <RxDesktop />,
+        icons: <RxDesktop size={70} />,
         description: "ola oamakmq kmqk z skmwks xdkmdkendkime cemkewf ",
       },
     ],
@@ -79,8 +77,9 @@ export const skill = [
   {
     info: [
       {
-        title:"Next js",
-        description:"Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+        title: "Next js",
+        description:
+          "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
         nextjs: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -98,8 +97,9 @@ export const skill = [
         ),
       },
       {
-        title:"React js",
-        description:"Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+        title: "React js",
+        description:
+          "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
         react: (
           <svg viewBox="0 0 128 128">
             <g fill="#61DAFB">
@@ -110,8 +110,9 @@ export const skill = [
         ),
       },
       {
-        title:"Node js",
-        description:"Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+        title: "Node js",
+        description:
+          "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
         node: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -133,8 +134,9 @@ export const skill = [
         ),
       },
       {
-        title:"Tailwind",
-        description:"Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+        title: "Tailwind",
+        description:
+          "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
         tailwind: (
           <svg
             viewBox="0 0 48 48"
@@ -150,8 +152,9 @@ export const skill = [
         ),
       },
       {
-        title:"Figma",
-        description:"Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+        title: "Figma",
+        description:
+          "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
         figma: (
           <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -178,8 +181,9 @@ export const skill = [
         ),
       },
       {
-        title:"Mysql",
-        description:"Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+        title: "Mysql",
+        description:
+          "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
         mysql: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -221,8 +225,9 @@ export const skill = [
         ),
       },
       {
-        title:"Typescript",
-        description:"Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+        title: "Typescript",
+        description:
+          "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
         typescript: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -252,8 +257,9 @@ export const skill = [
         ),
       },
       {
-        title:"Jest",
-        description:"Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+        title: "Jest",
+        description:
+          "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
         jest: (
           <svg
             width="30px"
@@ -277,8 +283,9 @@ export const skill = [
         ),
       },
       {
-        title:"HTML",
-        description:"Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+        title: "HTML",
+        description:
+          "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
         html: (
           <svg
             width="30px"
@@ -334,8 +341,9 @@ export const skill = [
         ),
       },
       {
-        title:"CSS",
-        description:"Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+        title: "CSS",
+        description:
+          "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
         css: (
           <svg
             width="30px"
@@ -387,8 +395,9 @@ export const skill = [
         ),
       },
       {
-        title:"Javascript",
-        description:"Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+        title: "Javascript",
+        description:
+          "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
         javascript: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -402,8 +411,9 @@ export const skill = [
         ),
       },
       {
-        title:"Bootstrap",
-        description:"Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
+        title: "Bootstrap",
+        description:
+          "Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.",
         bootstrap: (
           <svg
             width="30px"
@@ -426,6 +436,52 @@ export const skill = [
             </g>
           </svg>
         ),
+      },
+    ],
+  },
+];
+
+export const projetoBasicoData = [
+  {
+    title: "Basico",
+    info: [
+      {
+        tooltips: "Design",
+        icons: <MdOutlineWeb />,
+        description: "ola oamakmq kmqk z skmwks xdkmdkendkime cemkewf ",
+        image: "/cara.png",
+        LinkCode: "/",
+        LinkSite: "/",
+      },
+    ],
+  },
+];
+export const projetoIntermediariaData = [
+  {
+    title: "Inter",
+    info: [
+      {
+        tooltips: "Design",
+        icons: <MdOutlineWeb />,
+        description: "ola oamakmq kmqk z skmwks xdkmdkendkime cemkewf ",
+        image: "/cara.png",
+        LinkCode: "/",
+        LinkSite: "/",
+      },
+    ],
+  },
+];
+export const projetoAvancadoData = [
+  {
+    title: "Avan",
+    info: [
+      {
+        tooltips: "Design",
+        icons: <MdOutlineWeb />,
+        description: "ola oamakmq kmqk z skmwks xdkmdkendkime cemkewf ",
+        image: "/cara.png",
+        LinkCode: "/",
+        LinkSite: "/",
       },
     ],
   },

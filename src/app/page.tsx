@@ -8,18 +8,20 @@ import { Contact } from "@/components/Contact";
 import { Skills } from "@/components/Skills";
 import { Avatar } from "@/components/Avatar";
 import { Expericence } from "@/components/Expericence";
+import { ButtonCV } from "@/components/Button";
 
 export default function Home() {
   return (
-    <main>
+    <main id="home">
+      <div className="circle-background"></div>
       <section
         className="3xl:px-0 padding-container max-container page flex flex-col gap-4 flexcenter
-            pb-18 lg:flex-row lg:gap-40"
+             lg:flex-row lg:gap-40 relative -top-64"
       >
-        <div className="flex-1 flexcenter flex-col lg:items-start ">
-          <h2 className="bold-18">
+        <div className="flex-1 flexcenter flex-col lg:items-start">
+          <h2 className="bold-44">
             Olá eu sou{" "}
-            <span className=" text-secondary bold-20"> Paulo Victor </span>
+            <span className="text-secondary bold-40"> Paulo Victor </span>
           </h2>
           <h4 className="bold-28">
             Sou
@@ -36,13 +38,16 @@ export default function Home() {
             </span>
           </h4>
           <p className="py-4 bold-14">How to create scroll-linked Motion.</p>
+          <div className="m-2 pb-2">
+            <ButtonCV />
+          </div>
           <SocialIcon />
         </div>
         <Avatar />
       </section>
 
-      <Adout /> 
-      <Expericence /> 
+      <Adout />
+      <Expericence />
       <Skills />
       <Work />
       <Contact />

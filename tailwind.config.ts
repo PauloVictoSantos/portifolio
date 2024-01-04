@@ -9,11 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#121212",
+        primary: "#1B1B1B",
         secondary: "#dc143c",
         tertiary: "#202020",
+        quartary: "#FF00E6",
+        quintary: "#4800FF",
+        textdark: "#121212",
+        textlight: "#FDFFFC",
         blue: "#0471A6",
         instagra: "#FF00E6",
+        roxo: "#531C",
         white: "#EAEAEA",
         slate: {
           10: "#f1f3f4",

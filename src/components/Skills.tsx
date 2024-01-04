@@ -1,196 +1,48 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 
 import Image from "next/image";
 import { skill } from "@/app/constants/data";
 
 export const Skills = () => {
-  const [showNextJSInfo, setShowNextJSInfo] = useState(false);
-  const [showReactInfo, setShowReactInfo] = useState(false);
-  const [showNodeInfo, setshowNodeInfo] = useState(false);
-  const [showTailwindInfo, setShowTailwindInfo] = useState(false);
-  const [showFigmaInfo, setShowFigmaInfo] = useState(false);
-  const [showMysqleInfo, setShowMysqlInfo] = useState(false);
-  const [showTypescriptInfo, setShowTypescriptInfo] = useState(false);
-  const [showJestInfo, setShowJestInfo] = useState(false);
-  const [showHTMLInfo, setShowHTMLInfo] = useState(false);
-  const [showCSSInfo, setShowCSSInfo] = useState(false);
-  const [showJavascriptInfo, setShowJavascriptInfo] = useState(false);
-  const [showBootstrapInfo, setShowBootstrapInfo] = useState(false);
-
-  const toggleNextJSInfo = () => {
-    setShowNextJSInfo(!showNextJSInfo);
-    setShowReactInfo(false);
-    setshowNodeInfo(false);
-    setShowTailwindInfo(false);
-    setShowTypescriptInfo(false);
-    setShowJestInfo(false);
-    setShowFigmaInfo(false);
-    setShowMysqlInfo(false);
-    setShowHTMLInfo(false);
-    setShowCSSInfo(false);
-    setShowJavascriptInfo(false);
-    setShowBootstrapInfo(false);
+  const skillInfo = {
+    showNextJSInfo: 0,
+    showReactInfo: 1,
+    showNodeInfo: 2,
+    showTailwindInfo: 3,
+    showFigmaInfo: 4,
+    showMysqleInfo: 5,
+    showTypescriptInfo: 6,
+    showJestInfo: 7,
+    showHTMLInfo: 8,
+    showCSSInfo: 9,
+    showJavascriptInfo: 10,
+    showBootstrapInfo: 11,
   };
 
-  const toggleReactInfo = () => {
-    setShowReactInfo(!showReactInfo);
-    setShowNextJSInfo(false);
-    setshowNodeInfo(false);
-    setShowTailwindInfo(false);
-    setShowTypescriptInfo(false);
-    setShowJestInfo(false);
-    setShowFigmaInfo(false);
-    setShowMysqlInfo(false);
-    setShowHTMLInfo(false);
-    setShowCSSInfo(false);
-    setShowJavascriptInfo(false);
-    setShowBootstrapInfo(false);
+  const [activeSkill, setActiveSkill] = useState(null);
+
+  const toggleSkillInfo = (skill) => {
+    setActiveSkill(activeSkill === skill ? null : skill);
   };
 
-  const toggleNodeInfo = () => {
-    setshowNodeInfo(!showNodeInfo);
-    setShowNextJSInfo(false);
-    setShowReactInfo(false);
-    setShowTailwindInfo(false);
-    setShowTypescriptInfo(false);
-    setShowJestInfo(false);
-    setShowFigmaInfo(false);
-    setShowMysqlInfo(false);
-    setShowHTMLInfo(false);
-    setShowCSSInfo(false);
-    setShowJavascriptInfo(false);
-    setShowBootstrapInfo(false);
-  };
-
-  const toggleTailwindInfo = () => {
-    setShowTailwindInfo(!showTailwindInfo);
-    setShowNextJSInfo(false);
-    setShowReactInfo(false);
-    setshowNodeInfo(false);
-    setShowTypescriptInfo(false);
-    setShowJestInfo(false);
-    setShowFigmaInfo(false);
-    setShowMysqlInfo(false);
-    setShowHTMLInfo(false);
-    setShowCSSInfo(false);
-    setShowJavascriptInfo(false);
-    setShowBootstrapInfo(false);
-  };
-
-  const toggleFigmaInfo = () => {
-    setShowFigmaInfo(!showFigmaInfo);
-    setShowReactInfo(false);
-    setshowNodeInfo(false);
-    setShowTailwindInfo(false);
-    setShowTypescriptInfo(false);
-    setShowJestInfo(false);
-    setShowMysqlInfo(false);
-    setShowHTMLInfo(false);
-    setShowCSSInfo(false);
-    setShowJavascriptInfo(false);
-    setShowBootstrapInfo(false);
-  };
-
-  const toggleMysqlInfo = () => {
-    setShowMysqlInfo(!showMysqleInfo);
-    setShowReactInfo(false);
-    setshowNodeInfo(false);
-    setShowTailwindInfo(false);
-    setShowTypescriptInfo(false);
-    setShowJestInfo(false);
-    setShowFigmaInfo(false);
-    setShowHTMLInfo(false);
-    setShowCSSInfo(false);
-    setShowJavascriptInfo(false);
-    setShowBootstrapInfo(false);
-  };
-
-  const toggleTypescriptInfo = () => {
-    setShowTypescriptInfo(!showJestInfo);
-    setShowReactInfo(false);
-    setshowNodeInfo(false);
-    setShowTailwindInfo(false);
-    setShowJestInfo(false);
-    setShowFigmaInfo(false);
-    setShowMysqlInfo(false);
-    setShowHTMLInfo(false);
-    setShowCSSInfo(false);
-    setShowJavascriptInfo(false);
-    setShowBootstrapInfo(false);
-  };
-
-  const toggleJestInfo = () => {
-    setShowJestInfo(!showTypescriptInfo);
-    setShowReactInfo(false);
-    setshowNodeInfo(false);
-    setShowTailwindInfo(false);
-    setShowTypescriptInfo(false);
-    setShowFigmaInfo(false);
-    setShowMysqlInfo(false);
-    setShowHTMLInfo(false);
-    setShowCSSInfo(false);
-    setShowJavascriptInfo(false);
-    setShowBootstrapInfo(false);
-  };
-
-  const toggleHTMLInfo = () => {
-    setShowHTMLInfo(!showHTMLInfo);
-    setShowReactInfo(false);
-    setshowNodeInfo(false);
-    setShowTailwindInfo(false);
-    setShowTypescriptInfo(false);
-    setShowJestInfo(false);
-    setShowFigmaInfo(false);
-    setShowMysqlInfo(false);
-    setShowCSSInfo(false);
-    setShowJavascriptInfo(false);
-    setShowBootstrapInfo(false);
-  };
-
-  const toggleCSSInfo = () => {
-    setShowCSSInfo(!showCSSInfo);
-    setShowReactInfo(false);
-    setshowNodeInfo(false);
-    setShowTailwindInfo(false);
-    setShowTypescriptInfo(false);
-    setShowJestInfo(false);
-    setShowFigmaInfo(false);
-    setShowMysqlInfo(false);
-    setShowHTMLInfo(false);
-    setShowJavascriptInfo(false);
-    setShowBootstrapInfo(false);
-  };
-
-  const toggleJavascriptInfo = () => {
-    setShowJavascriptInfo(!showJavascriptInfo);
-    setShowReactInfo(false);
-    setshowNodeInfo(false);
-    setShowTailwindInfo(false);
-    setShowTypescriptInfo(false);
-    setShowJestInfo(false);
-    setShowFigmaInfo(false);
-    setShowMysqlInfo(false);
-    setShowHTMLInfo(false);
-    setShowCSSInfo(false);
-    setShowBootstrapInfo(false);
-  };
-
-  const toggleBootstrapInfo = () => {
-    setShowBootstrapInfo(!showBootstrapInfo);
-    setShowReactInfo(false);
-    setshowNodeInfo(false);
-    setShowTailwindInfo(false);
-    setShowTypescriptInfo(false);
-    setShowJestInfo(false);
-    setShowFigmaInfo(false);
-    setShowMysqlInfo(false);
-    setShowHTMLInfo(false);
-    setShowCSSInfo(false);
-    setShowJavascriptInfo(false);
-  };
+  const toggleNextJSInfo = () => toggleSkillInfo("showNextJSInfo");
+  const toggleReactInfo = () => toggleSkillInfo("showReactInfo");
+  const toggleNodeInfo = () => toggleSkillInfo("showNodeInfo");
+  const toggleTailwindInfo = () => toggleSkillInfo("showTailwindInfo");
+  const toggleFigmaInfo = () => toggleSkillInfo("showFigmaInfo");
+  const toggleMysqlInfo = () => toggleSkillInfo("showMysqleInfo");
+  const toggleTypescriptInfo = () => toggleSkillInfo("showTypescriptInfo");
+  const toggleJestInfo = () => toggleSkillInfo("showJestInfo");
+  const toggleHTMLInfo = () => toggleSkillInfo("showHTMLInfo");
+  const toggleCSSInfo = () => toggleSkillInfo("showCSSInfo");
+  const toggleJavascriptInfo = () => toggleSkillInfo("showJavascriptInfo");
+  const toggleBootstrapInfo = () => toggleSkillInfo("showBootstrapInfo");
 
   return (
-    <div className="3xl:px-0 padding-container max-container page flex items-center justify-center ">
+    <section
+      id="Skills"
+      className="3xl:px-0 padding-container max-container page flex items-center justify-center"
+    >
       <div className="pl-8 text-center">
         <h3 className="text-[30px] lg:txet-[36px] font-extrabold relative leading-normal uppercase">
           Skill
@@ -275,7 +127,7 @@ export const Skills = () => {
 
             <button
               onClick={toggleJestInfo}
-              className="profile_item -left-[40%] -top-4 absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500"
+              className="profile_item right-[285px] -top-0.5 absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500"
             >
               <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 skill-icon">
                 {skill[0].info[7].jest}
@@ -284,7 +136,7 @@ export const Skills = () => {
 
             <button
               onClick={toggleHTMLInfo}
-              className="profile_item -left-[25%] -top-24 absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500"
+              className="profile_item left-[42%] -top-24 absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500"
             >
               <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 skill-icon">
                 {skill[0].info[8].html}
@@ -293,7 +145,7 @@ export const Skills = () => {
 
             <button
               onClick={toggleCSSInfo}
-              className="profile_item -bottom-[10%] -left-[20%] absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500"
+              className="profile_item top-[55%] -left-[30%] absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500"
             >
               <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 skill-icon">
                 {skill[0].info[9].css}
@@ -302,7 +154,7 @@ export const Skills = () => {
 
             <button
               onClick={toggleJavascriptInfo}
-              className="profile_item -bottom-[10%] -right-[20%] absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500"
+              className="profile_item -bottom-[23%] left-[25px] absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500"
             >
               <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 skill-icon">
                 {skill[0].info[10].javascript}
@@ -311,7 +163,7 @@ export const Skills = () => {
 
             <button
               onClick={toggleBootstrapInfo}
-              className="profile_item -right-[40%] -bottom-4 absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500"
+              className="profile_item right-[24px] -bottom-[22%] absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500"
             >
               <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 skill-icon">
                 {skill[0].info[11].bootstrap}
@@ -335,79 +187,16 @@ export const Skills = () => {
         </div>
       </div>
 
-      {showNextJSInfo && (
-        <div className="w-1/2 relative -top-56 animate-fadeInDisappear">
-          <h4>{skill[0].info[0].title}</h4>
-          <p className="text-xs">{skill[0].info[0].description}</p>
+      {activeSkill !== null && (
+        <div className="cursor-pointer overflow-hidden relative -top-44 mr-10 transition-all duration-500 hover:translate-y-2 w-[500px] h-40 bg-slate-800 rounded-lg shadow-xl flex flex-col gap-2 p-2 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-red-900">
+          <span className="font-bold">
+            {skill[0].info[skillInfo[activeSkill]].title}
+          </span>
+          <p className=" text-xs">
+            {skill[0].info[skillInfo[activeSkill]].description}
+          </p>
         </div>
       )}
-
-      {showReactInfo && (
-        <div className="w-1/2 relative -top-56">
-          <h4>{skill[0].info[1].title}</h4>
-          <p className="text-xs">{skill[0].info[1].description}</p>
-        </div>
-      )}
-      {showNodeInfo && (
-        <div className="w-1/2 relative -top-56">
-          <h4>{skill[0].info[2].title}</h4>
-          <p className="text-xs">{skill[0].info[2].description}</p>
-        </div>
-      )}
-      {showTailwindInfo && (
-        <div className="w-1/2 relative -top-56">
-          <h4>{skill[0].info[3].title}</h4>
-          <p className="text-xs">{skill[0].info[3].description}</p>
-        </div>
-      )}
-      {showFigmaInfo && (
-        <div className="w-1/2 relative -top-56">
-          <h4>{skill[0].info[4].title}</h4>
-          <p className="text-xs">{skill[0].info[4].description}</p>
-        </div>
-      )}
-      {showMysqleInfo && (
-        <div className="w-1/2 relative -top-56">
-          <h4>{skill[0].info[5].title}</h4>
-          <p className="text-xs">{skill[0].info[5].description}</p>
-        </div>
-      )}
-      {showTypescriptInfo && (
-        <div className="w-1/2 relative -top-56">
-          <h4>{skill[0].info[6].title}</h4>
-          <p className="text-xs">{skill[0].info[6].description}</p>
-        </div>
-      )}
-      {showJestInfo && (
-        <div className="w-1/2 relative -top-56">
-          <h4>{skill[0].info[7].title}</h4>
-          <p className="text-xs">{skill[0].info[7].description}</p>
-        </div>
-      )}
-      {showHTMLInfo && (
-        <div className="w-1/2 relative -top-56">
-          <h4>{skill[0].info[8].title}</h4>
-          <p className="text-xs">{skill[0].info[8].description}</p>
-        </div>
-      )}
-      {showCSSInfo && (
-        <div className="w-1/2 relative -top-56">
-          <h4>{skill[0].info[9].title}</h4>
-          <p className="text-xs">{skill[0].info[9].description}</p>
-        </div>
-      )}
-      {showJavascriptInfo && (
-        <div className="w-1/2 relative -top-56">
-          <h4>{skill[0].info[10].title}</h4>
-          <p className="text-xs">{skill[0].info[10].description}</p>
-        </div>
-      )}
-      {showBootstrapInfo && (
-        <div className="w-1/2 relative -top-56">
-          <h4>{skill[0].info[11].title}</h4>
-          <p className="text-xs">{skill[0].info[11].description}</p>
-        </div>
-      )}
-    </div>
+    </section>
   );
 };
