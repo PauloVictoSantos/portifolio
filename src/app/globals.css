@@ -152,6 +152,7 @@ body{
   background: linear-gradient(326deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 85%, rgba(11,0,37,1) 100%);
   color: white;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .skill-icon {
@@ -160,40 +161,18 @@ body{
   justify-content: center;
 }
 
-.circle-background {
-  position: relative;
-  top: -93px;
-  z-index: -1;
-  left: -51px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: #ff00e675;
-  opacity: .1;
-  filter: blur(145px);
-}
-
-@keyframes moveRightLeft {
-  0%, 100% {
-    transform: translateX(0);
+@keyframes typing {
+  from {
+    width: 0;
   }
-  50% {
-    transform: translateX(100%);
+  to {
+    width: 100%;
   }
 }
 
-.moveTopButton {
-  animation: moveTopButton 30s infinite;
-}
-@keyframes moveTopButton {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(50%);
-  }
-}
 
-.moveRightLeft {
-  animation: moveRightLeft 30s infinite;
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(40, end) forwards;
 }

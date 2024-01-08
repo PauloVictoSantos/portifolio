@@ -1,56 +1,54 @@
 import { qualificacaoData } from "@/app/constants/data";
 import React from "react";
 
-interface QualificacaoInfo {
-  title: string;
-  icons: React.ReactElement;
-  description: string;
-}
-
-
-
 export const Expericence = () => {
   return (
-    <section id="Expericence"
-    
-    className="3xl:px-0 padding-container max-container py-12 xl:py-32">
+    <section
+      id="Expericence"
+      className="3xl:px-0 padding-container max-container py-12 xl:py-32"
+    >
       <div className="pb-12 text-center">
-        <h3 className="text-[30px] lg:txet-[36px] font-extrabold relative leading-normal uppercase">
-          Experiênci
+        <h3 className="text-[30px] lg:text-[36px] font-extrabold relative leading-normal uppercase">
+          Experiências
           <samp className=" text-secondary">a</samp>
           <samp
             className="text-[45px] lg:text-[54px] font-extrabold text-white/5 absolute top-[50%]
-           left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase"
+      left-1/2 -translate-y-1/2 -translate-x-1/2 uppercase"
           >
             Minhas Experiências
           </samp>
         </h3>
-        <p className="text-center max-w-md mx-auto text-gray-20 mt-12">
-          Olá, blá blá blá blá blá blá blá blá.
+
+        <p className="text-center max-w-[31rem] mx-auto text-base text-gray-20 mt-12 mb-8">
+          Embora eu não tenha muita experiência, estou apaixonado pelo
+          desenvolvimento frontend e pronto para resolver problemas. Busco
+          oportunidades para aprender e contribuir de forma significativa para
+          projetos.
         </p>
       </div>
 
-      {/* Experience */}
       {qualificacaoData.map((data, index) => (
-        <div key={index} className="flex gap-10 items-center justify-center">
+        <div
+          key={index}
+          className="flex gap-10 items-center justify-center flex-wrap"
+        >
           {data.info.map((info, innerIndex) => (
-            <div key={innerIndex} className="hover:-translate-y-2 group bg-transparent duration-500 w-96 h-96 flex text-secondary/40 flex-col justify-center items-center relative rounded-xl overflow-hidden shadow-md">
-              <svg
-                viewBox="0 0 200 200"
-                xmlns="http://www.w3.org/2000/svg"
-                className="absolute  z-10 fill-tertiary duration-500 group-hover:blur-none group-hover:scale-105"
-              >
-                <path
-                  transform="translate(100 100)"
-                  d="M39.5,-49.6C54.8,-43.2,73.2,-36.5,78.2,-24.6C83.2,-12.7,74.8,4.4,69,22.5C63.3,40.6,60.2,59.6,49.1,64.8C38.1,70,19,61.5,0.6,60.7C-17.9,59.9,-35.9,67,-47.2,61.9C-58.6,56.7,-63.4,39.5,-70,22.1C-76.6,4.7,-84.9,-12.8,-81.9,-28.1C-79,-43.3,-64.6,-56.3,-49.1,-62.5C-33.6,-68.8,-16.8,-68.3,-2.3,-65.1C12.1,-61.9,24.2,-55.9,39.5,-49.6Z"
-                ></path>
-              </svg>
-
-              <div className="z-20 flex flex-col justify-center items-center">
-                {info.icons}
-                <span className="font-bold text-6xl ml-2">{info.title}</span>
-                <p className="font-bold text-center text-xs mt-2 w-[200px]">{info.description}</p>
+            <div
+              key={innerIndex}
+              className="card text-gray-300 w-[clamp(260px,80%,300px)] hover:brightness-90 transition-all cursor-pointer group bg-gradient-to-tl from-gray-900 to-gray-950 hover:from-gray-800 hover:to-gray-950 border-r-2 border-t-2 border-gray-900 m-4 rounded-lg overflow-hidden relative"
+            >
+              <div className="px-8 py-10">
+                <div className="bg-secondary flex justify-center items-center w-10 h-10 rounded-full rounded-tl-none mb-4 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-red-900 transition-all">
+                  {info.icons}
+                </div>
+                <div className="uppercase font-bold text-xl">{info.title}</div>
+                <div className="text-gray-300 mt-2 text-xs">
+                  {info.description}
+                </div>
               </div>
+
+              <div className="h-2 w-full bg-gradient-to-l via-[#FF00E6] group-hover:blur-xl blur-2xl m-auto rounded transition-all absolute bottom-0"></div>
+              <div className="h-0.5 group-hover:w-full bg-gradient-to-l via-secondary group-hover:via-secondary/80 w-[70%] m-auto rounded transition-all"></div>
             </div>
           ))}
         </div>

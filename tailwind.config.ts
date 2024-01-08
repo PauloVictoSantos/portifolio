@@ -11,15 +11,12 @@ const config: Config = {
       colors: {
         primary: "#1B1B1B",
         secondary: "#dc143c",
-        tertiary: "#202020",
-        quartary: "#FF00E6",
-        quintary: "#4800FF",
+        tertiary: "#363841",
         textdark: "#121212",
-        textlight: "#FDFFFC",
+        textlight: "#FFFFFF",
         blue: "#0471A6",
         instagra: "#FF00E6",
-        roxo: "#531C",
-        white: "#EAEAEA",
+        white: "#FFFFFF",
         slate: {
           10: "#f1f3f4",
         },

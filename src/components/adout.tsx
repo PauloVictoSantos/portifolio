@@ -2,6 +2,8 @@
 import React from "react";
 import CountUp from "react-countup";
 import { HiComputerDesktop } from "react-icons/hi2";
+import { MdOutlineWeb } from "react-icons/md";
+
 import Image from "next/image";
 
 export default function Adout() {
@@ -34,45 +36,42 @@ export default function Adout() {
               Minhas Experiências
             </samp>
           </h3>
-          <p className=" hidden sm:block text-center lg:text-start mt-20">
-            Olá, sou Paulo Victor Conceição dos Santos, um apaixonado
-            profissional da tecnologia com formação técnica em Desenvolvimento
-            de Sistemas pelo Instituto Federal de Educação, Ciência e Tecnologia
-            do Amazonas - IFAM.
+
+          <p className="text-justify lg:text-justify mr-5 mt-8 sm:mt-20 indent-8">
+            Olá! Sou Paulo Victor, apaixonado por programação desde o curso{" "}
+            <samp className="font-extrabold text-lg text-secondary/80">
+              técnico em Desenvolvimento de Sistemas no IFAM. Destaquei-me no
+            </samp>{" "}
+            projeto de Capacitação 4.0 na Embrapii e IFAM CMDI, colaborando no
+            desenvolvimento de um sistema espelho da Embrapi. Atualmente, busco
+            me tornar um programador fullstack, combinando minhas habilidades
+            técnicas e{" "}
+            <samp className="font-extrabold text-lg text-secondary/80">
+              Soft Skills.{" "}
+            </samp>
+            para enfrentar desafios de forma abrangente.
           </p>
         </div>
 
-        <div className=" flex gap-5">
+        <div className=" flex gap-20 justify-center items-center">
           <div className="flex gap-5">
             <div className="flex justify-center items-center rounded-full h-10 w-10 bg-secondary">
               <HiComputerDesktop />
             </div>
             <div>
-              <span>Web Site Design</span>{" "}
+              <span>Web Site</span>{" "}
               <p>
-                <CountUp start={0} end={2} duration={10} delay={1} /> Projeto
+                <CountUp start={0} end={7} duration={10} delay={1} /> Projeto
               </p>
             </div>
           </div>
 
           <div className="flex gap-5">
             <div className="flex justify-center items-center rounded-full h-10 w-10 bg-secondary">
-              <HiComputerDesktop />
+              <MdOutlineWeb />
             </div>
             <div>
-              <span>Web Site Design</span>{" "}
-              <p>
-                <CountUp start={0} end={2} duration={10} delay={1} /> Projeto
-              </p>
-            </div>
-          </div>
-
-          <div className="flex gap-5">
-            <div className="flex justify-center items-center rounded-full h-10 w-10 bg-secondary">
-              <HiComputerDesktop />
-            </div>
-            <div>
-              <span>Web Site Design</span>{" "}
+              <span>Design Web</span>{" "}
               <p>
                 <CountUp start={0} end={2} duration={10} delay={1} /> Projeto
               </p>
